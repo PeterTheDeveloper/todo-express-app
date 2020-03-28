@@ -8,16 +8,16 @@ const bodyParser = require('body-parser');
 const TaskList = require("./models/TaskList.js");
 const Task = require("./models/Task.js");
 
-const list = new TaskList()
+const list = new TaskList();
 
-app.use(bodyParser.urlencoded({extended: false}))
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 
 // Set path for Styles
-app.use(express.static('styles'))
+app.use(express.static('styles'));
 
 // Template
-app.set('views', path.join(__dirname, 'views'))
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // If go to index, render index EJS file
@@ -29,8 +29,6 @@ app.get('/', (req, res) => {
 //Setting a public folder for our static files
 app.use(express.static("public"));
 app.use('/view-tasks', express.static('public'));
-
-
 
 app.post('/addTask', (req, res) => {
   const taskTitle = req.body.taskTitle;

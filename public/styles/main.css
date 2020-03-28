@@ -1,3 +1,7 @@
 body {
-    background-color: blue;
+    background-color: slategrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }

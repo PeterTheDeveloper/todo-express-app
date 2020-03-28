@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>Todo List</title>
     <link rel="stylesheet" href="styles/main.css" type="text/css" />
 </head>
 <body>
     <h1>TaskList</h1>
-    
-    <% for( var i = 0; i < Object.values(list).length; i++){ %>
-    <li><input type="checkbox" name="check" value="<%= list.values[i] %>" /> <%= Object.values(list)[i] %> </li>
-    <% } %>
-        
+    <ul><% const values = Object.values(list); %>
+        <% for( var i = 0; i < values.length; i++){ %>
+        <li><input type="checkbox" name="check" value="" /> <%= values %> </li>
+        <% } %>
+    </ul>
 </body>
 </html>
